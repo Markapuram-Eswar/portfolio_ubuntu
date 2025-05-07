@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'screens/desktop_screen.dart';
+import 'screens/splash_screen.dart'; // Import the SplashScreen
 
 void main() {
-  // Set preferred orientations
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.landscapeLeft,
-    DeviceOrientation.landscapeRight,
-  ]);
-
-  // Hide status bar
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-
   runApp(const MyApp());
 }
 
@@ -22,14 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ubuntu Portfolio',
+      title: 'Portfolio Ubuntu',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xFFE95420)), // Ubuntu orange
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
+        fontFamily: 'Ubuntu', // Set default font to Ubuntu
       ),
-      debugShowCheckedModeBanner: false,
-      home: const DesktopScreen(),
+      debugShowCheckedModeBanner: false, // Disable the debug banner
+      home: const SplashScreen(),
     );
   }
 }

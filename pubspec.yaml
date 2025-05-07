@@ -37,6 +37,9 @@ dependencies:
   flutter_svg: ^2.0.9 # Add this for SVG support
   webview_flutter: ^4.4.2 # Add this line
   desktop_webview_window: ^0.2.0
+  intl: ^0.19.0
+  url_launcher: ^6.3.0
+  flutter_webview_plugin: ^0.4.0
 
 dev_dependencies:
   flutter_test:
@@ -90,10 +93,15 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 
-  # Add assets
   assets:
     - assets/images/wallpapers/
     - assets/images/logos/
     - assets/images/memes/
+    - assets/images/logos/Ubuntu-Emblema.png
     - assets/themes/
     - assets/themes/Yaru/apps/
+    - assets/themes/Yaru/status/
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu-Regular.ttf

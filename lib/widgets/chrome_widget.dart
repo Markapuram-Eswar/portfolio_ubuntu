@@ -6,10 +6,10 @@ class ChromeBrowser extends StatefulWidget {
   final VoidCallback onClose;
 
   const ChromeBrowser({
-    Key? key,
+    super.key,
     required this.initialPosition,
     required this.onClose,
-  }) : super(key: key);
+  });
 
   @override
   _ChromeBrowserState createState() => _ChromeBrowserState();
